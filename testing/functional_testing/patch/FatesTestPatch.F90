@@ -8,6 +8,9 @@ program FatesTestPatch
   use FatesPatchMod,               only : fates_patch_type
   use FatesFactoryMod,             only : InitializeGlobals, GetSyntheticPatch
   use SyntheticPatchTypes,         only : synthetic_patch_array_type
+  use EDCanopyStructureMod,        only : UpdatePatchLAI
+  use PRTParametersMod,            only : prt_params
+
   
   implicit none
 
@@ -39,11 +42,28 @@ program FatesTestPatch
   i = patch_data%PatchDataPosition(patch_name='tropical')
   call GetSyntheticPatch(patch_data%patches(i), num_levsoil, patch)
 
+  ! update the patch LAI
+  cohort => patch%shortest
+  patch%total_canopy_area = 0.0_r8
+  do while (associated(cohort))
+  if (Cohort%canopy_layer==1)then
+      patch%total_canopy_area = patch%total_canopy_area + cohort%c_area
+      if( prt_params%woody(cohort%pft) == 1)then
+            patch%total_tree_area = patch%total_tree_area + cohort%c_area
+      endif
+  endif
+  cohort => cohort%taller
+  end do
+
+  !patch%total_canopy_area = 100.0_r8
+  write(*,*) patch%total_canopy_area
+  call UpdatePatchLAI(patch)
+
     ! print out list in ascending order
   cohort => patch%shortest
-  write(*,*) 'Patch structure:'
+  write(*,*) 'Updated Patch LAI: '
   do while (associated(cohort))
-    write (*,*)  cohort%pft, cohort%dbh, cohort%height
+    write (*,*)  cohort%pft, cohort%height,cohort%treelai, cohort%c_area, cohort%canopy_layer
     cohort => cohort%taller
   end do
   write(*,*) ' '

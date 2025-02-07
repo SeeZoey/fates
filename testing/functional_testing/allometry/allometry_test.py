@@ -6,6 +6,7 @@ import xarray as xr
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+#before run: export PYTHONPATH=$PYTHONPATH:/glade/u/home/zzhou/ctsm_v5.3.019/src/fates/testing/
 from utils import round_up, get_color_palette, blank_plot
 from functional_class import FunctionalTest
 

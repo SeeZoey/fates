@@ -10,6 +10,7 @@ from utils import round_up, get_color_palette, blank_plot
 from functional_class import FunctionalTest
 
 
+
 class PatchTest(FunctionalTest):
     """Patch test class
     """

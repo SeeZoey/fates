@@ -218,6 +218,7 @@ def check_build_dir(build_dir, test_dict):
             )
 
 
+
 def check_out_files(run_dir, test_dict):
     """Checks to see that required output files are present in the run directory
 

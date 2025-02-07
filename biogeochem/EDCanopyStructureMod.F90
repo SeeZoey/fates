@@ -2225,7 +2225,7 @@ contains
             
             ! Update the number of number of vegetation layers
             currentPatch%nleaf(cl,ft) = max(currentPatch%nleaf(cl,ft),currentCohort%NV)
-
+         
             ! Update the patch canopy layer tlai (LAI per canopy area)
             currentPatch%canopy_layer_tlai(cl) = currentPatch%canopy_layer_tlai(cl) +  &
                  currentCohort%treelai *currentCohort%c_area/currentPatch%total_canopy_area
