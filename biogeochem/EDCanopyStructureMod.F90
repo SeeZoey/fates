@@ -2263,7 +2263,6 @@ contains
           currentCohort%canopy_layer, canopy_layer_tlai, currentCohort%vcmax25top, currentCohort%dbh, currentCohort%crowndamage,          &
           currentCohort%canopy_trim, currentCohort%efstem_coh, 4, currentCohort%treelai, treesai )
 
-   currentCohort%treelai = treelai
    ! Do not update stem area index of SP vegetation
    if (hlm_use_sp .eq. ifalse) then
       currentCohort%treesai = treesai

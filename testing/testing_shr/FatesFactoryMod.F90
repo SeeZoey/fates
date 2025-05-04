@@ -471,6 +471,7 @@ module FatesFactoryMod
     ! create the patch 
     call PatchFactory(patch, patch_age, patch_data%area, num_swb, numpft, num_levsoil)
     
+    
     ! add cohorts
     do i = 1, patch_data%num_cohorts 
       allocate(cohort)

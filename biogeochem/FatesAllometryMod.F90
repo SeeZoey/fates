@@ -104,7 +104,7 @@ module FatesAllometryMod
   implicit none
 
   private
-  public :: h2d_allom     ! Generic height to diameter wrapper
+  public :: h2d_allom      ! Generic height to diameter wrapper
   public :: h_allom       ! Generic diameter to height wrapper
   public :: bagw_allom    ! Generic AGWB (above grnd. woody bio) wrapper
   public :: blmax_allom   ! Generic maximum leaf biomass wrapper
@@ -128,6 +128,7 @@ module FatesAllometryMod
 
   public :: tree_lai_sai       ! LAI and SAI calculations must work together, thus they
                                ! should never be called separately
+  public :: tree_lai
 
   logical         , parameter :: verbose_logging = .false.
   character(len=*), parameter :: sourcefile = __FILE__

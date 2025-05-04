@@ -223,13 +223,53 @@ module SyntheticPatchTypes
       
     call this%AddPatch(patch_id=5, patch_name='temperate', area=500.0_r8,                &
       ages=(/80.0_r8, 50.0_r8, 20.0_r8, 5.0_r8/),                                        &
-      dbhs=(/50.0_r8, 30.0_r8, 15.0_r8, 3.0_r8/),                                        &
+      dbhs=(/100.0_r8, 30.0_r8, 15.0_r8, 5.0_r8/),                                        &
       densities=(/0.005_r8, 0.01_r8, 0.015_r8, 0.005_r8/),                               &
-      pft_ids=(/6, 2, 2, 9/),                                                            &
+      pft_ids=(/6, 2, 2, 2/),                                                            &
       canopy_layers=(/1, 1, 2, 2/))
+
+    call this%AddPatch(patch_id=6, patch_name='3layers', area=500.0_r8,                &
+      ages=(/80.0_r8, 50.0_r8, 20.0_r8/),                                        &
+      dbhs=(/80.0_r8, 50.0_r8, 15.0_r8/),                                        &
+      densities=(/0.005_r8, 0.01_r8, 0.015_r8/),                               &
+      pft_ids=(/2, 2, 2/),                                                            &
+      canopy_layers=(/1, 2, 3/))  
+
+    call this%AddPatch(patch_id=7, patch_name='cohort1', area=500.0_r8,                &
+      ages=(/80.0_r8/),                                        &
+      dbhs=(/80.0_r8/),                                        &
+      densities=(/0.01_r8/),                               &
+      pft_ids=(/6/),                                                            &
+      canopy_layers=(/1/))  
+
+    call this%AddPatch(patch_id=8, patch_name='cohort2', area=500.0_r8,                &
+      ages=(/80.0_r8, 8.0_r8/),                                        &
+      dbhs=(/80.0_r8, 8.0_r8/),                                        &
+      densities=(/0.01_r8,0.005_r8/),                               &
+      pft_ids=(/6,6/),                                                            &
+      canopy_layers=(/1,2/))  
+
+    call this%AddPatch(patch_id=9, patch_name='cohort4', area=500.0_r8,                &
+      ages=(/80.0_r8, 10.0_r8, 3.0_r8, 1.0_r8/),                                        &
+      dbhs=(/80.0_r8, 10.0_r8, 3.0_r8, 1.0_r8/),                                        &
+      densities=(/0.01_r8, 0.01_r8, 0.02_r8, 0.04_r8/),                               &
+      pft_ids=(/6,6,6,6/),                                                            &
+      canopy_layers=(/1,2,3,4/))  
     
+    call this%AddPatch(patch_id=10, patch_name='cohort8', area=500.0_r8,                &
+      ages=(/85.0_r8, 80.0_r8, 15.0_r8, 10.0_r8, 5.0_r8, 3.0_r8, 1.2_r8, 1.0_r8/),                                        &
+      dbhs=(/85.0_r8, 80.0_r8, 15.0_r8, 10.0_r8, 5.0_r8, 3.0_r8, 1.2_r8, 1.0_r8/),                                        &
+      densities=(/0.005_r8, 0.005_r8, 0.01_r8, 0.01_r8, 0.02_r8, 0.02_r8, 0.04_r8, 0.04_r8/),                               &
+      pft_ids=(/2,6,2,6,2,6,2,6/),                                                            &
+      canopy_layers=(/1,1,2,2,3,3,4,4/))  
   end subroutine GetSyntheticPatchData
   
   ! --------------------------------------------------------------------------------------
   
 end module SyntheticPatchTypes
+
+!      ages=(/80.0_r8, 50.0_r8, 20.0_r8, 5.0_r8/),                                        &
+!      dbhs=(/50.0_r8, 30.0_r8, 15.0_r8, 3.0_r8/),                                        &
+!      densities=(/0.005_r8, 0.01_r8, 0.015_r8, 0.005_r8/),                               &
+!      pft_ids=(/6, 2, 2, 2/),                                                            &
+!      canopy_layers=(/1, 1, 2, 2/))

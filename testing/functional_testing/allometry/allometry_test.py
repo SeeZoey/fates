@@ -190,6 +190,7 @@ class AllometryTest(FunctionalTest):
         plt.legend(loc="upper left", title="PFT")
 
         if save_fig:
+            print(plot_dir)
             fig_name = os.path.join(
                 plot_dir, "allometry_plot_total_biomass_compare.png"
             )
