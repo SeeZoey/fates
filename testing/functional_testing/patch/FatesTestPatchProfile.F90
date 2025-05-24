@@ -98,7 +98,7 @@ program FatesTestPatch
   ! get all the patch data
   call patch_data%GetSyntheticPatchData()
   
-  i = patch_data%PatchDataPosition(patch_name='cohort8')
+  i = patch_data%PatchDataPosition(patch_name='temperate')
   call GetSyntheticPatch(patch_data%patches(i), num_levsoil, patch)
 
 
@@ -277,7 +277,7 @@ program FatesTestPatch
 
   end if if_any_canopy_area
 
-  write(*,*) patch_total_lai
+  write(*,*) patch%tlai_profile(1,2,:)!patch_total_lai
 
 
 

@@ -222,8 +222,8 @@ module SyntheticPatchTypes
       canopy_layers=(/1, 1/))
       
     call this%AddPatch(patch_id=5, patch_name='temperate', area=500.0_r8,                &
-      ages=(/80.0_r8, 50.0_r8, 20.0_r8, 5.0_r8/),                                        &
-      dbhs=(/100.0_r8, 30.0_r8, 15.0_r8, 5.0_r8/),                                        &
+      ages=(/60.0_r8, 50.0_r8, 20.0_r8, 5.0_r8/),                                        &
+      dbhs=(/50.0_r8, 30.0_r8, 15.0_r8, 5.0_r8/),                                        &
       densities=(/0.005_r8, 0.01_r8, 0.015_r8, 0.005_r8/),                               &
       pft_ids=(/6, 2, 2, 2/),                                                            &
       canopy_layers=(/1, 1, 2, 2/))
